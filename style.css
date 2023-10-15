@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
-    height: 3000px;
+    height: 5700px;
     width: 100%;
-    background-image: linear-gradient(rgb(0, 255, 0),black);
+    background-image: linear-gradient(rgb(0, 0, 0),black);
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar{
     visibility: hidden;
@@ -30,31 +32,42 @@ body{
 }
 .nav{
     height: 70px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px;
+
     position: sticky;
     z-index: 5;
     top: 0px;
     display: flex;
     justify-content:space-between;
     align-items: center;
-    width: 100%;
-    background-color: black;
+    width: 80%;
+    border-radius: 3rem;
+    background-color: rgba(0, 0, 0, 0.304);
     backdrop-filter: blur(10px);
 }
-
+.quote{
+    font-family: "myFirstFont";
+    font-size: 2rem;
+    background: -webkit-linear-gradient(180deg,rgb(188, 12, 241), rgb(212, 4, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #logo{
     height:68px;
 }
 .register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 56px;
+    color: black;
+    text-decoration: none;
     width: 150px;
     font-family: "myFirstFont";
     border-radius: 28px;
     border: none;
     box-shadow: 0px 0px 10px 1px red;
-    background-image: linear-gradient(135deg,rgb(255, 0, 0),rgb(255, 217, 47));
+    background-color: orange;
     font-size: 1.4rem;
     color:black ;
     transition: 0.12s all linear;
@@ -81,14 +94,14 @@ body{
     align-items: center;
 }
 .background{
-    height: 900px;
-    width: 100%;
-    background-image: url('./assets/man.jpeg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    position: sticky;
-    top: 70px;
+  height: 970px;
+  width: 100%;
+  background-image: url('./assets/man.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: sticky;
+  top: 70px;
   display: flex;
   background-color: BLACK;
   align-items: center;
@@ -102,22 +115,461 @@ body{
     position: absolute;
     z-index: 8;
 }
+.img_grid{
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1);
+    filter: opacity(1);
+    display: grid;
+    grid-template-rows: repeat(50,2%);
+    grid-template-columns: repeat(50,2%);
+}
+.t1{
+    height: 250px;
+    width: 300px;
+    transition: 0.15s transform ease-out;
+}
+.t2{
+ height: 200px;
+    width: 350px;
+    transition: 0.25s transform ease-out;
+}
+.t3{
+ height: 300px;
+    width: 300px;
+    transition: 0.10s transform ease-out;
+}
+.t4{
+   height: 250px;
+    width: 300px;
+    transition: 0.20s transform ease-out;  
+}
+.img1{
+    grid-area: 3/3/15/7;
+}
+.img2{
+    grid-area: 1/18/9/27;
+}
+.img3{
+    grid-area: 1/32/14/42;
+}
+.img4{
+    grid-area: 13/11/32/18;
+}
+.img5{
+    grid-area: 22/25/28/35;
+}
+.img6{
+    grid-area: 20/38/38/51;
+}
+.img7{
+    grid-area:32/1/51/10 ;
+}
+.img8{
+    grid-area: 38/16/36/22;
+}
+.img9{
+    grid-area: 40/26/51 /32;
+}
+.img10{
+    grid-area: 37 /39 /48 /47;
+}
 .Aurora23_text{
     top: 35%;
 }
+
 .text{
     height: 100%;
     width: 100%;
-    backdrop-filter: brightness(0%);
+    backdrop-filter: brightness(72%);
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     position: relative;
     flex-direction: column;
-    background-image:linear-gradient(to bottom,rgba(0, 0,0, 0.1),rgba(0, 0, 0, 0.84));
+    background-image:linear-gradient(to bottom,rgba(0, 0,0, 0.0),rgba(0, 0, 0, 0.94));
+    position: absolute;
+    z-index: 8;
+    top: 0;
 }
 .After_text{
    top:55%;
    color:rgba(255, 255, 255, 0);
    font-size: 7.85rem;
 }
+.intro{
+    height: 1000px;
+    width: 100%;
+    padding-top: 277px;
+    background-image: linear-gradient( rgb(0, 0, 0),rgb(0, 0, 0));
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    top: 100px;
+}
+.intro_head{
+    height: 100px;
+    font-size: 5rem;
+    color: rgba(255,255,255,0);
+   
+    font-weight: 600;
+    font-family: "myFirstFont";
+}
+.discription{
+    border-radius: 2rem;
+    top: 300px;
+   height: 250px;
+   padding: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 0%;
+   text-align: justify;
+   width: 80%;
+   color:rgba(255,255,255,0);
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   background-size: 3px auto;
+   font-size: 1.3rem;
+   transition: 0.12s all linear;
+
+}
+.Video{
+   position: relative;
+    height: 780px;
+    font-family: "myFirstFont";
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    color: orangered;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: opacity(0) brightness(1.2);
+    font-size: 3rem;
+}
+.video_player{
+    outline: none;
+    
+}
+
+.counter{
+    position: relative;
+    top: 300px;
+    height: 230px;
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: -webkit-linear-gradient(180deg,rgba(255,0,0,0), rgb(255,155,0,0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(1.7);
+    font-family: "myFirstFont";
+    font-size: 3rem;
+    color: white;
+}
+.reg_counter{
+    font-size: 10rem;
+}
+
+
+
+.formContainer {
+    width: 100%;
+    position: relative;
+    top: 2900px;
+    margin: 0;
+    padding: 100px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #141622;
+    background-color: #000000;
+  }
+  .formContainer .form {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+  }
+  .formContainer .form .input-control .field .focus {
+    font-size: large;
+    padding: 18px;
+    width: 400px;
+    height: 50px;
+    border: 1px solid rgb(195, 193, 190);
+    border-radius: 5px;
+    margin-top: 8px;
+    background-color: #161922;
+    color: white;
+  }
+  .formContainer .form .input-control .field label {
+    position: absolute;
+    left: 20px;
+    top: 40%;
+  }
+  
+  .formContainer .form .input-control .field {
+    position: relative;
+    display: grid;
+    margin: 35px;
+  }
+  .formContainer .form .input-control {
+    padding: 30px;
+  }
+  
+  .formContainer .form .input-control .field:focus-within label,
+  .formContainer .form .input-control .field input:valid label {
+    font-size: 0.99em;
+    color: rgb(173, 161, 161);
+    left: 0px;
+    margin-top: 0;
+    top: -10px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .form .heading p {
+    text-align: center;
+    font-size: 35px;
+  }
+  .heading {
+    position: relative;
+  
+    padding: 0 30px;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .diamond {
+    width: 38px;
+    height: 16px;
+    background: url(./assets/diamonds.svg) no-repeat;
+    background-size: contain;
+    margin: 0 10px;
+  }
+  .heading hr {
+    position: relative;
+    -webkit-flex: 1 1;
+    width: 10px;
+    flex: 1 1;
+  
+    border-bottom: 1px solid #696b78;
+  }
+  .submClass .regButton {
+    width: 400px;
+    height: 50px;
+    align-content: center;
+    /* background-color: #5523dd; */
+    /* background-color: #ce7142; */
+    background-color: orangered;
+  
+    /* background-color: transparent; */
+    border-radius: 30px;
+    border: #696b78;
+    /* border: 1px solid rgb(255, 253, 250); */
+    /* background-color: #161922; */
+  }
+  
+  .submClass .regButton {
+    width: 400px;
+    height: 50px;
+    align-content: center;
+    /* background-color: #5523dd; */
+    /* background-color: #ce7142; */
+    background-color: orangered;
+  
+    /* background-color: transparent; */
+    border-radius: 30px;
+    border: #696b78;
+    /* border: 1px solid rgb(255, 253, 250); */
+    /* background-color: #161922; */
+  }
+  
+  .form .submClass {
+    text-align: center;
+  }
+  .form .submClass p {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  @keyframes rotateHue {
+      0% {
+        filter: hue-rotate(0deg); /* skyblue */
+      }
+      25% {
+        filter: hue-rotate(20deg); /* orangered */
+      }
+      50% {
+        filter: hue-rotate(320deg); /* rgb(255, 0, 179) */
+      }
+      75% {
+        filter: hue-rotate(190deg); /* rgb(12, 214, 255) */
+      }
+      100% {
+        filter: hue-rotate(60deg); /* yellow */
+      }
+    }
+  
+    .regButton{
+      width: 150px;
+      padding: 12px;
+      border-radius: 20px;
+      color: white;
+      border: 3px solid #284cff;
+      cursor: pointer;
+      background: transparent;
+      background-image: url('https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871');
+      background-repeat: repeat-x;
+      background-position: 0 -100%;
+      transition: 1.5s ease;
+    }
+    
+    .regButton:hover{
+      background-position: center;
+    }
+    
+    .regButton:nth-child(6){
+      filter: hue-rotate(120deg);
+    }
+   
+  .form .submClass {
+    text-align: center;
+  }
+  .form .submClass p {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .formContainer .left {
+    position: relative;
+  }
+  .formContainer .left p {
+    color: white;
+    font-size: 80px;
+    text-transform: uppercase;
+  }
+  
+  .formContainer .leftcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .leftcontainer .text1 {
+    font-size: 100px;
+    letter-spacing: -0.01em;
+    line-height: 100%;
+    margin: 0;
+  
+    width: 100%;
+    color: rgba(182, 182, 182, 0.353);
+    background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+  
+    border-bottom: 1px solid #2f2b28;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+  }
+  .leftcontainer .textSpecial {
+    border-bottom: none;
+  }
+  @keyframes changeBackgroundColor {
+    0% {
+      color: skyblue;
+    }
+    25% {
+      color: orangered;
+    }
+    50% {
+      color: rgb(255, 0, 179);
+    }
+    75% {
+      color: rgb(12, 214, 255);
+    }
+    100% {
+      color: yellow;
+    }
+  }
+  .bgSpan {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    animation: changeBackgroundColor 4s infinite;
+    -webkit-background-clip: text;
+    /* background-clip: text; */
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+    transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .leftcontainer .text1:hover > span {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .leftcontainer .text1:hover {
+    /* transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s; */
+    color: black;
+  }
+  
+  /* media */
+  @media (max-width: 1160px) {
+    .text1 {
+      font-size: 40px;
+    }
+    .focus {
+      font-size: large;
+      padding: 18px;
+      width: 350px;
+      height: 40px;
+    }
+    .submClass .regButton {
+      width: 350px;
+      height: 40px;
+    }
+  }
+  @media (max-width: 700px) {
+    .formContainer {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .text1 {
+      font-size: 40px;
+    }
+    .focus {
+      font-size: large;
+      padding: 18px;
+      width: 300px;
+      height: 30px;
+    }
+    .submClass .regButton {
+      width: 300px;
+      height: 40px;
+    }
+  }
